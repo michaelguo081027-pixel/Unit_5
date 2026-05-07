@@ -1,15 +1,22 @@
 int mode;
+int difficulty;
 final int intro=1;
 final int game=2;
 final int pause=3;
 final int end=4;
-float x, y, d;
+final int options=5;
+final int classic=6;
+final int bonus=7;
+final int insane=8;
+float x, y, d, t;
 float vx, vy;
 int score, lives;
+float blue, green;
 
 void setup(){
   size(800, 800);
   mode=intro;
+  difficulty=classic;
   textAlign(CENTER, CENTER);
   //rectMode(CENTER);
   x=width/2;
@@ -30,6 +37,8 @@ void draw(){
     pause();
   }else if(mode==end){
     end();
+  }else if(mode==options){
+    options();
   }else{
     println("ERROR: INVALID ENTRY");
   }

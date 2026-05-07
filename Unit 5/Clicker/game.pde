@@ -1,5 +1,5 @@
 void game(){
-  background(0, 255, 0);
+  background(255, green, blue);
   //pause
   stroke(0);
   fill(255);
@@ -14,7 +14,7 @@ void game(){
   //target
   strokeWeight(5);
   stroke(0);
-  fill(255);
+  fill(0, 255, 0);
   circle(x, y, d);
   
   //move
@@ -33,10 +33,14 @@ void game(){
 void gameClicks(){
   if(dist(mouseX, mouseY, x, y)<d/2){
     score=score+1;
+    vx=vx*1.05;
+    vy=vy*1.05;
   }else if(dist(mouseX, mouseY, 650, 100)<50){
     mode=pause;
   }else{
     lives=lives-1;
+    blue=blue-255/3;
+    green=green-255/3;
     if(lives==0) mode=end;
   }
 }

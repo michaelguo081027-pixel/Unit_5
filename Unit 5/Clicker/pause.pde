@@ -9,5 +9,5 @@ void pause(){
 }
 
 void pauseClicks(){
-  mode=game;
+  if(dist(mouseX, mouseY, 650, 100)<50)mode=game;
 }
