@@ -17,11 +17,25 @@ void options(){
   text("BONUS", 400, 250);
   text("INSANE", 625, 250);
   stroke(0);
-  line(350, 450, 550, 450);
+  line(250, 550, 550, 550);
   fill(255/2);
-  circle(t, 50, 30);
+  circle(t, 550, 30);
   strokeWeight(5);
-  
+  if(difficulty==classic){
+    fill(0, 255, 0);
+    circle(400, 400, d);
+  }else if(difficulty==bonus){
+    fill(0, 255, 255);
+    circle(400, 400, d);
+    fill(255, 255, 0);
+    circle(400, 400, 2*d/3);
+    fill(255, 0, 0);
+    circle(400, 400, d/3);
+  }else if(difficulty==insane){
+    fill(0);
+    text("No size adjustment for this mode,", 400, 350);
+    text("Size gets smaller as game continues.", 400, 450);
+  }
 }
 
 void optionClicks(){
@@ -31,9 +45,9 @@ void optionClicks(){
 }
 
 void slider() {
-  if (mouseX > 350 && mouseX <550 && mouseY > 435 && mouseY < 465){
+  if (mouseX > 250 && mouseX <550 && mouseY > 535 && mouseY < 565){
     t = mouseX;
   }
   
-  d = map(t, 350, 550, 0, 10);
+  d = map(t, 250, 550, 0, 100);
 }

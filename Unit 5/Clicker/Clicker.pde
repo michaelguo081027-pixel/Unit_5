@@ -16,7 +16,7 @@ float blue, green;
 void setup(){
   size(800, 800);
   mode=intro;
-  difficulty=classic;
+  difficulty=bonus;
   textAlign(CENTER, CENTER);
   //rectMode(CENTER);
   x=width/2;

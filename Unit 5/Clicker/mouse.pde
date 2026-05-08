@@ -10,8 +10,9 @@ void mouseReleased(){
   }else if(mode==options){
     optionClicks();
   }
+  if(mode==options && difficulty!=insane)slider();
 }
 
 void mouseDragged(){
-  if(mode=options)slider();
+  if(mode==options && difficulty!=insane)slider();
 }

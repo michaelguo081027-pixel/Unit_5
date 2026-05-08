@@ -13,6 +13,7 @@ void intro(){
   text("OPTIONS", 600, 550);
   x=width/2;
   y=height/2;
+  t=550;
   d=100;
   vx=random(-5, 5);
   vy=random(-5, 5);
