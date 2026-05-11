@@ -7,14 +7,13 @@ void intro(){
   rect(500, 500, 200, 100);
   textSize(100);
   fill(0);
-  text("CLICKER GAME", 400, 300);
+  text("JUST A CLICKER", 400, 300);
   textSize(40);
   text("START", 200, 550);
   text("OPTIONS", 600, 550);
   x=width/2;
   y=height/2;
   t=550;
-  d=100;
   vx=random(-5, 5);
   vy=random(-5, 5);
   score=0;
@@ -33,7 +32,7 @@ void introClicks(){
 
 void select(int x, int y, int w, int h){
   if(mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h){
-    stroke(255, 0, 0);
+    stroke(255, 0, 255);
     fill(255, 165, 0);
   } else {
     stroke(0);

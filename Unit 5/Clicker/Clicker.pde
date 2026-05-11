@@ -10,20 +10,21 @@ final int bonus=7;
 final int insane=8;
 float x, y, d, t;
 float vx, vy;
-int score, lives;
+int highscore, score, lives;
 float blue, green;
 
 void setup(){
   size(800, 800);
   mode=intro;
-  difficulty=bonus;
+  difficulty=classic;
   textAlign(CENTER, CENTER);
   //rectMode(CENTER);
   x=width/2;
   y=height/2;
-  d=100;
+  d=110;
   vx=random(-5, 5);
   vy=random(-5, 5);
+  score=0;
   //score=0;
   //lives=3;
 }

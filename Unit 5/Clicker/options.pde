@@ -31,9 +31,12 @@ void options(){
     circle(400, 400, 2*d/3);
     fill(255, 0, 0);
     circle(400, 400, d/3);
-  }else if(difficulty==insane){
     fill(0);
-    text("No size adjustment for this mode,", 400, 350);
+    text("Blue=1, Yellow=2, Red=3", 400, 500);
+  }else if(difficulty==insane){
+    d=110;
+    fill(0);
+    text("No size adjustment for this mode.", 400, 350);
     text("Size gets smaller as game continues.", 400, 450);
   }
 }
@@ -41,6 +44,12 @@ void options(){
 void optionClicks(){
   if(mouseX>300&&mouseX<500&&mouseY>600&&mouseY<700){
     mode=intro;
+  }else if(mouseX>100&&mouseX<250&&mouseY>200&&mouseY<300){
+    difficulty=classic;
+  }else if(mouseX>325&&mouseX<475&&mouseY>200&&mouseY<300){
+    difficulty=bonus;
+  }else if(mouseX>550&&mouseX<700&&mouseY>200&&mouseY<300){
+    difficulty=insane;
   }
 }
 
@@ -49,5 +58,5 @@ void slider() {
     t = mouseX;
   }
   
-  d = map(t, 250, 550, 0, 100);
+  d = map(t, 250, 550, 10, 110);
 }
