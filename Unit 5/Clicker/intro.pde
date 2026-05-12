@@ -1,6 +1,7 @@
 void intro(){
   background(255, 255, 0);
   strokeWeight(5);
+  //button
   select(100, 500, 200, 100);
   rect(100, 500, 200, 100);
   select(500, 500, 200, 100);
@@ -11,6 +12,7 @@ void intro(){
   textSize(40);
   text("START", 200, 550);
   text("OPTIONS", 600, 550);
+  //initialization
   x=width/2;
   y=height/2;
   t=550;
@@ -23,11 +25,8 @@ void intro(){
 }
 
 void introClicks(){
-  if(mouseX>100&&mouseX<300&&mouseY>500&&mouseY<600){
-    mode=game;
-  }else if(mouseX>500&&mouseX<700&&mouseY>500&&mouseY<600){
-    mode=options;
-  }
+  if(mouseX>100&&mouseX<300&&mouseY>500&&mouseY<600)mode=game;
+  else if(mouseX>500&&mouseX<700&&mouseY>500&&mouseY<600)mode=options;
 }
 
 void select(int x, int y, int w, int h){

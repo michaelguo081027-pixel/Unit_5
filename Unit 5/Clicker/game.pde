@@ -12,7 +12,6 @@ void game(){
   text("Score: "+score, width/8, height/10);
   text("Lives: "+lives, width/8, height/10+35);
   //target
-  
   if(difficulty==classic||difficulty==insane){ 
     strokeWeight(5);
     stroke(0);
@@ -28,47 +27,42 @@ void game(){
     fill(255, 0, 0);
     circle(x, y, d/3);
   }
-  
   //move
   x=x+vx;
   y=y+vy;
   //bounce
-  if(x<d/2||x>width-d/2){
-    vx=vx*-1;
-  }
-  if(y<d/2||y>height-d/2){
-    vy=vy*-1;
-  }
+  if(x<d/2||x>width-d/2)vx=vx*-1;
+  if(y<d/2||y>height-d/2)vy=vy*-1;
 }
 
 void gameClicks(){
-    if(dist(mouseX, mouseY, x, y)<d/2){
+  if(dist(mouseX, mouseY, x, y)<d/2){
+    score=score+1;
+    vx=vx*1.05;
+    vy=vy*1.05;
+    if(difficulty==insane)d=d*0.95;
+    else if(difficulty==bonus){
+    if(dist(mouseX, mouseY, x, y)<d/2&&dist(mouseX, mouseY, x, y)>d/3){
+      score=score+0;
+      vx=vx*1.05;
+      vy=vy*1.05;
+    }else if(dist(mouseX, mouseY, x, y)<d/3&&dist(mouseX, mouseY, x, y)>d/6){
       score=score+1;
       vx=vx*1.05;
       vy=vy*1.05;
-      if(difficulty==insane)d=d*0.95;
-      else if(difficulty==bonus){
-      if(dist(mouseX, mouseY, x, y)<d/2&&dist(mouseX, mouseY, x, y)>d/3){
-        score=score+0;
-        vx=vx*1.05;
-        vy=vy*1.05;
-      }else if(dist(mouseX, mouseY, x, y)<d/3&&dist(mouseX, mouseY, x, y)>d/6){
-        score=score+1;
-        vx=vx*1.05;
-        vy=vy*1.05;
-      }else if(dist(mouseX, mouseY, x, y)<d/6){
-        score=score+2;
-        vx=vx*1.05;
-        vy=vy*1.05;
-      }
-     }
+    }else if(dist(mouseX, mouseY, x, y)<d/6){
+      score=score+2;
+      vx=vx*1.05;
+      vy=vy*1.05;
+    }
+   }
   }else if(dist(mouseX, mouseY, 650, 100)<50){
     mode=pause;
   }else{
     lives=lives-1;
     blue=blue-255/3;
     green=green-255/3;
-    if(lives==0) mode=end;
+    if(lives==0)mode=end;
   }
 }
   
