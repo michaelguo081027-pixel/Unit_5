@@ -5,6 +5,7 @@ final int pause=3;
 final int end=4;
 float lx,ly,ld,rx,ry,rd;
 float bx,by,bd;
+boolean wkey, skey, upkey, downkey;
 
 void setup(){
   size(900, 600);
@@ -19,6 +20,7 @@ void setup(){
   bx=width/2;
   by=height/2;
   bd=100;
+  wkey=skey=upkey=downkey=false;
 }
 
 void draw(){
