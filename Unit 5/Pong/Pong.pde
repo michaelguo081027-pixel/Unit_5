@@ -4,7 +4,9 @@ final int game=2;
 final int pause=3;
 final int end=4;
 float lx,ly,ld,rx,ry,rd;
-float bx,by,bd;
+float bx,by,bd,vx,vy;
+int ls,rs;
+float t;
 boolean wkey, skey, upkey, downkey;
 
 void setup(){
@@ -20,7 +22,12 @@ void setup(){
   bx=width/2;
   by=height/2;
   bd=100;
+  ls=0;
+  rs=0;
+  t=2;
   wkey=skey=upkey=downkey=false;
+  vx=random(-5, 5);
+  vy=random(-5, 5);
 }
 
 void draw(){

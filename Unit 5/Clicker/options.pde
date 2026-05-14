@@ -42,6 +42,11 @@ void options(){
     fill(0);
     text("No size adjustment for this mode.", 400, 350);
     text("Size gets smaller as game continues.", 400, 450);
+    fill(192);
+    stroke(192);
+    rect(200, 490, 400, 90);
+    fill(0);
+    stroke(0);
   }
 }
 

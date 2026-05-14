@@ -8,7 +8,7 @@ void intro(){
   rect(500, 500, 200, 100);
   textSize(100);
   fill(0);
-  text("JUST A CLICKER", 400, 300);
+  text("JUST CLICK!", 400, 300);
   textSize(40);
   text("START", 200, 550);
   text("OPTIONS", 600, 550);
