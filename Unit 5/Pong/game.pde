@@ -6,7 +6,8 @@ void game(){
   textSize(50);
   fill(255, 0, 0);
   text(ls, width/4, 100);
-  fill(0);
+  if(AI==false)fill(0);
+  else fill(0, 0, 255);
   text(rs, 3*width/4, 100);
   textSize(75);
   fill(255, 0, 255);
@@ -21,12 +22,26 @@ void game(){
   stroke(0);
   fill(255, 0, 0);
   circle(lx, ly, ld);
+  if(ly<100)ly=100;
+  if(ly>500)ly=500;
   if(wkey==true)ly=ly-5;
   if(skey==true)ly=ly+5;
-  fill(0);
+  if(AI==false)fill(0);
+  else fill(0, 0, 255);
   circle(rx, ry, rd);
-  if(upkey==true)ry=ry-5;
-  if(downkey==true)ry=ry+5;
+  if(ry<100)ry=100;
+  if(ry>500)ry=500;
+  if(AI==false){
+    if(upkey==true)ry=ry-5;
+    if(downkey==true)ry=ry+5;
+  }else{
+    if(by<ry-rd/2){
+      ry=ry-5;
+    }
+    if(by>ry+rd/2){
+      ry=ry+5;
+    }
+  }
   fill(255, 165, 0);
   circle(bx, by, bd);
   //move
@@ -52,6 +67,7 @@ void game(){
     ls++;
     reset();
   }
+  if(ls==3||rs==3)mode=end;
 }
 
 void gameClicks(){

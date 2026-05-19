@@ -1,18 +1,33 @@
 void intro(){
   background(255, 255, 0);
   strokeWeight(5);
+  ls=0;
+  rs=0;
   //button
-  select(350, 400, 200, 100);
-  rect(350, 400, 200, 100);
+  select(100, 400, 300, 100);
+  rect(100, 400, 300, 100);
+  select(500, 400, 300, 100);
+  rect(500, 400, 300, 100);
   textSize(100);
   fill(0);
   text("PONG", 450, 200);
   textSize(40);
-  text("START", 450, 450);
+  text("Single Player", 250, 450);
+  text("Local Multiplayer", 650, 450);
+  textSize(25);
+  text("1P: W-up, S-down", 250, 375);
+  text("2P: UpArrow-up, DownArrow-down", 650, 375);
 }
 
 void introClicks(){
-  if(mouseX>350&&mouseX<550&&mouseY>400&&mouseY<500)mode=game;
+  if(mouseX>100&&mouseX<400&&mouseY>400&&mouseY<500){
+    mode=game;
+    AI=true;
+  }
+  if(mouseX>500&&mouseX<800&&mouseY>400&&mouseY<500){
+    mode=game;
+    AI=false;
+  }
 }
 
 void select(int x, int y, int w, int h){

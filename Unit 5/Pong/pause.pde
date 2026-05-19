@@ -1,5 +1,5 @@
 void pause(){
-  strokeWeight(5);
+  strokeWeight(7);
   stroke(0);
   fill(255);
   circle(750, 500, 100);

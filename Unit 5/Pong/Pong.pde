@@ -8,6 +8,7 @@ float bx,by,bd,vx,vy;
 int ls,rs;
 float t;
 boolean wkey, skey, upkey, downkey;
+boolean AI;
 
 void setup(){
   size(900, 600);
@@ -22,8 +23,6 @@ void setup(){
   bx=width/2;
   by=height/2;
   bd=100;
-  ls=0;
-  rs=0;
   t=2;
   wkey=skey=upkey=downkey=false;
   vx=random(-5, 5);
