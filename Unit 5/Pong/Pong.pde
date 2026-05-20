@@ -25,8 +25,8 @@ void setup(){
   bd=100;
   t=2;
   wkey=skey=upkey=downkey=false;
-  vx=random(-5, 5);
-  vy=random(-5, 5);
+  vx=random(7, 2);
+  vy=random(7, 2);
 }
 
 void draw(){

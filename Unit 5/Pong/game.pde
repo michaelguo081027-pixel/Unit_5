@@ -62,10 +62,14 @@ void game(){
   if(bx<0){
     rs++;
     reset();
+    vx=random(-2, -7);
+    vy=random(-2, -7);
   }
   if(bx>width){
     ls++;
     reset();
+    vx=random(7, 2);
+    vy=random(7, 2);
   }
   if(ls==3||rs==3)mode=end;
 }
@@ -82,10 +86,8 @@ void message(){
 
 void reset(){
   bx=width/2;
-    by=height/2;
-    t=2;
-    vx=random(-5, 5);
-    vy=random(-5, 5);
-    ly=height/2;
-    ry=height/2;
+  by=height/2;
+  t=2;
+  ly=height/2;
+  ry=height/2;
 }

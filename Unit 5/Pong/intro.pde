@@ -10,7 +10,7 @@ void intro(){
   rect(500, 400, 300, 100);
   textSize(100);
   fill(0);
-  text("PONG", 450, 200);
+  text("PONG: CLASSIC", 450, 200);
   textSize(40);
   text("Single Player", 250, 450);
   text("Local Multiplayer", 650, 450);
