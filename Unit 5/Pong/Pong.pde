@@ -1,8 +1,18 @@
+/*
+Michael Guo
+2-1
+2026/5/20
+Pong
+*/
+
+//general variable
 int mode;
+//entries
 final int intro=1;
 final int game=2;
 final int pause=3;
 final int end=4;
+//specific variables
 float lx,ly,ld,rx,ry,rd;
 float bx,by,bd,vx,vy;
 int ls,rs;
@@ -25,8 +35,6 @@ void setup(){
   bd=100;
   t=2;
   wkey=skey=upkey=downkey=false;
-  vx=random(7, 2);
-  vy=random(7, 2);
 }
 
 void draw(){

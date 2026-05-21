@@ -1,8 +1,11 @@
 void intro(){
   background(255, 255, 0);
   strokeWeight(5);
+  //initialization
   ls=0;
   rs=0;
+  vx=random(7, 2);
+  vy=random(7, 2);
   //button
   select(100, 400, 300, 100);
   rect(100, 400, 300, 100);

@@ -1,4 +1,5 @@
 void game(){
+  //board
   background(0, 128, 0);
   stroke(255);
   line(width/2, 0, width/2, height);
@@ -13,6 +14,7 @@ void game(){
   fill(255, 0, 255);
   message();
   t=t-0.01;
+  //paddle
   stroke(0);
   fill(255);
   circle(750, 500, 100);
@@ -22,15 +24,15 @@ void game(){
   stroke(0);
   fill(255, 0, 0);
   circle(lx, ly, ld);
-  if(ly<100)ly=100;
-  if(ly>500)ly=500;
+  if(ly<=100)ly=100;
+  if(ly>=500)ly=500;
   if(wkey==true)ly=ly-5;
   if(skey==true)ly=ly+5;
   if(AI==false)fill(0);
   else fill(0, 0, 255);
   circle(rx, ry, rd);
-  if(ry<100)ry=100;
-  if(ry>500)ry=500;
+  if(ry<=100)ry=100;
+  if(ry>=500)ry=500;
   if(AI==false){
     if(upkey==true)ry=ry-5;
     if(downkey==true)ry=ry+5;
