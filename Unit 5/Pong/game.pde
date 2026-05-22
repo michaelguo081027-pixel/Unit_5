@@ -4,6 +4,12 @@ void game(){
   stroke(255);
   line(width/2, 0, width/2, height);
   line(0, height/2, width, height/2);
+  stroke(0, 128, 0);
+  fill(0, 128, 0);
+  rect(425, 65, 50, 70);
+  textSize(75);
+  fill(0, 255, 0);
+  text("3", width/2, 100);
   textSize(50);
   fill(255, 0, 0);
   text(ls, width/4, 100);
@@ -37,10 +43,10 @@ void game(){
     if(upkey==true)ry=ry-5;
     if(downkey==true)ry=ry+5;
   }else{
-    if(by<ry-rd/2){
+    if(by<ry){
       ry=ry-5;
     }
-    if(by>ry+rd/2){
+    if(by>ry){
       ry=ry+5;
     }
   }
@@ -65,13 +71,13 @@ void game(){
     rs++;
     reset();
     vx=random(-2, -7);
-    vy=random(-2, -7);
+    vy=random(-5, 5);
   }
   if(bx>width){
     ls++;
     reset();
     vx=random(7, 2);
-    vy=random(7, 2);
+    vy=random(-5, 5);
   }
   if(ls==3||rs==3)mode=end;
 }
@@ -81,9 +87,9 @@ void gameClicks(){
 }
 
 void message(){
-  if(t>=1)text("ready",width/2, 100);
-  if(1>t&&t>=0)text("set",width/2, 100);
-  if(0>t&&t>=-1)text("GO!",width/2, 100);
+  if(t>=1)text("ready",width/2, 500);
+  if(1>t&&t>=0)text("set",width/2, 500);
+  if(0>t&&t>=-1)text("GO!",width/2, 500);
 }
 
 void reset(){
