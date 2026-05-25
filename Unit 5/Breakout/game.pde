@@ -16,11 +16,16 @@ void game(){
     vx=(x-i)/10;
     vy=(y-height)/10;
   }
-  circle(h[0], v[0], 75);
-  circle(h[1], v[1], 75);
-  circle(h[2], v[2], 75);
-  circle(h[3], v[3], 75);
-  circle(h[4], v[4], 75);
+  int j=0;
+  while (j<15){
+    circle(h[j], v[j], 75);
+    if(dist(h[j],v[j],x,y)<=75/2+30/2){
+    vx=(x-h[j])/10;
+    vy=(y-v[j])/10;
+    }
+    j=j+1;
+  }
+  
 }
 
 void gameClicks(){
