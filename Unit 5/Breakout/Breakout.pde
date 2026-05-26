@@ -8,60 +8,39 @@ float vx, vy;
 boolean akey, dkey, leftkey, rightkey;
 int[] v;
 int[] h;
+boolean[] stay;
+int tv, th;
+int c;
+int red, green;
 
 void setup(){
   size(800, 800);
+  textAlign(CENTER, CENTER);
   mode=intro;
   i=x=width/2;
   y=3*width/4;
   vx=0;
+  c=15;
+  red=255;
+  green=0;
   vy=random(1, 3);
-  h=new int[15];
-  v=new int[15];
-  h[0]=100;
-  v[0]=100;
-  
-  h[1]=250;
-  v[1]=100;
-  
-  h[2]=400;
-  v[2]=100;
-  
-  h[3]=550;
-  v[3]=100;
-  
-  h[4]=700;
-  v[4]=100;
-  
-  h[5]=100;
-  v[5]=250;
-  
-  h[6]=250;
-  v[6]=250;
-  
-  h[7]=400;
-  v[7]=250;
-  
-  h[8]=550;
-  v[8]=250;
-  
-  h[9]=700;
-  v[9]=250;
-  
-  h[10]=100;
-  v[10]=400;
-  
-  h[11]=250;
-  v[11]=400;
-  
-  h[12]=400;
-  v[12]=400;
-  
-  h[13]=550;
-  v[13]=400;
-  
-  h[14]=700;
-  v[14]=400;
+  h=new int[c];
+  v=new int[c];
+  stay=new boolean[c];
+  tv=100;
+  th=100;
+  int j=0;
+  while (j<c){
+    h[j]= th;
+    v[j]= tv;
+    stay[j]=true;
+    th=th+150;
+    if(th>700){
+      th=100;
+      tv=tv+150;
+    }
+    j=j+1;
+  }
 }
 
 void draw(){

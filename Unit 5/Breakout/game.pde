@@ -16,18 +16,41 @@ void game(){
     vx=(x-i)/10;
     vy=(y-height)/10;
   }
+  if(y>height)reset();
   int j=0;
-  while (j<15){
-    circle(h[j], v[j], 75);
-    if(dist(h[j],v[j],x,y)<=75/2+30/2){
-    vx=(x-h[j])/10;
-    vy=(y-v[j])/10;
+  while (j<c){
+    if(stay[j]==true){
+      manageBrick(j);
     }
-    j=j+1;
+    j++;
   }
-  
 }
 
 void gameClicks(){
-  
+  mode=pause;
 }
+
+void manageBrick(int j){
+  if(0<=j&&j<5){
+    red=255;
+    green=0;
+  }else if(j>=5&&j<10){
+    red=green=255;
+  }else if(j>=10&&j<15){
+    red=0;
+    green=255;
+  }
+  fill(red, green, 0);
+  circle(h[j], v[j], 75);
+  if(dist(h[j],v[j],x,y)<=75/2+30/2){
+  vx=(x-h[j])/10;
+  vy=(y-v[j])/10;
+  stay[j]=false;
+  }
+}
+
+void reset(){
+  x=width/2;
+  y=3*width/4;
+}
+  
