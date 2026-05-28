@@ -1,3 +1,10 @@
+/*
+Michael Guo
+2-1
+2026/5/28
+Pong
+*/
+
 int mode;
 final int intro=1;
 final int game=2;
@@ -14,6 +21,9 @@ int c;
 int red, green, blue;
 int lives, remain;
 float t;
+PImage[] gif;
+int number;
+int f;
 
 void setup(){
   size(800, 800);
@@ -21,6 +31,14 @@ void setup(){
   mode=intro;
   red=255;
   green=0;
+  number=60;
+  gif=new PImage[60];
+  size(800, 800);
+  int k=0;
+  while(k<number){
+    gif[k]=loadImage("frame_"+k+"_delay-0.03s.gif");
+    k=k+1;
+  }
 }
 
 void draw(){

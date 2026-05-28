@@ -77,7 +77,8 @@ void reset(){
   x=i;
   y=3*width/4;
   t=1.5;
-  vy=random(1, 3);
+  vy=random(3, 5);
+  vx=0;
 }
 
 void message(){

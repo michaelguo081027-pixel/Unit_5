@@ -32,16 +32,20 @@ void game(){
   circle(lx, ly, ld);
   if(ly<=100)ly=100;
   if(ly>=500)ly=500;
-  if(wkey==true)ly=ly-5;
-  if(skey==true)ly=ly+5;
+  if(t<0){
+    if(wkey==true)ly=ly-5;
+    if(skey==true)ly=ly+5;
+  }
   if(AI==false)fill(0);
   else fill(0, 0, 255);
   circle(rx, ry, rd);
   if(ry<=100)ry=100;
   if(ry>=500)ry=500;
   if(AI==false){
-    if(upkey==true)ry=ry-5;
-    if(downkey==true)ry=ry+5;
+    if(t<0){
+      if(upkey==true)ry=ry-5;
+      if(downkey==true)ry=ry+5;
+    }
   }else{
     if(by<ry){
       ry=ry-5;
@@ -87,9 +91,9 @@ void gameClicks(){
 }
 
 void message(){
-  if(t>=1)text("ready",width/2, 500);
-  if(1>t&&t>=0)text("set",width/2, 500);
-  if(0>t&&t>=-1)text("GO!",width/2, 500);
+  if(t>=1)text("Ready",width/2, 500);
+  if(1>t&&t>=0)text("Set",width/2, 500);
+  if(0>t&&t>=-1)text("GO!!!",width/2, 500);
 }
 
 void reset(){
