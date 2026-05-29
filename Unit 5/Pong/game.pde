@@ -91,7 +91,14 @@ void gameClicks(){
 }
 
 void message(){
-  if(t>=1)text("Ready",width/2, 500);
+  if(t>=2){
+    if(vx<0)text("1P turn",width/2, 500);
+    else{
+      if(AI==false)text("2P turn",width/2, 500);
+      else text("CP turn",width/2, 500);
+    }
+  }
+  if(2>t&&t>=1)text("Ready",width/2, 500);
   if(1>t&&t>=0)text("Set",width/2, 500);
   if(0>t&&t>=-1)text("GO!!!",width/2, 500);
 }
@@ -99,7 +106,7 @@ void message(){
 void reset(){
   bx=width/2;
   by=height/2;
-  t=2;
+  t=3;
   ly=height/2;
   ry=height/2;
 }

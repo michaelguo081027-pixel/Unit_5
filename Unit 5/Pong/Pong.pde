@@ -33,7 +33,7 @@ void setup(){
   bx=width/2;
   by=height/2;
   bd=75;
-  t=2;
+  t=3;
   wkey=skey=upkey=downkey=false;
 }
 
