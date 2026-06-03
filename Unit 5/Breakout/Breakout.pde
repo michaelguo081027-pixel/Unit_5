@@ -5,11 +5,13 @@ Michael Guo
 Breakout
 */
 
+//general variables
 int mode;
 final int intro=1;
 final int game=2;
 final int pause=3;
 final int end=4;
+//specific variables
 float i, x, y;
 float vx, vy;
 boolean akey, dkey, leftkey, rightkey;
@@ -32,6 +34,7 @@ void setup(){
   red=255;
   green=0;
   blue=0;
+  //gif
   number=60;
   gif=new PImage[60];
   size(800, 800);
