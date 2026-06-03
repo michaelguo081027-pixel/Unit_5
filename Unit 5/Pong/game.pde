@@ -49,14 +49,13 @@ void game(){
       ry=ry+5;
     }
   }
+  //ball
   fill(255, 165, 0);
   circle(bx, by, bd);
-  //move
   if(t<0){
     bx=bx+vx;
     by=by+vy;
   }
-  //bounce
   if(dist(lx,ly,bx,by)<=ld/2+bd/2){
     vx=(bx-lx)/10;
     vy=(by-ly)/10;
@@ -66,6 +65,7 @@ void game(){
     vy=(by-ry)/10;
   }
   if(by<bd/2||by>height-bd/2)vy=vy*-1;
+  //scoring
   if(bx<0){
     rs++;
     reset();
@@ -82,7 +82,7 @@ void game(){
 }
 
 void gameClicks(){
-  if(dist(mouseX, mouseY, 750, 500)<50)mode=pause;
+  mode=pause;
 }
 
 void message(){
