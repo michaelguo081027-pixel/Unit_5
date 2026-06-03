@@ -1,11 +1,9 @@
 void pause(){
-  strokeWeight(7);
-  stroke(0);
-  fill(255);
-  circle(750, 500, 100);
-  triangle(735, 475, 735, 525, 765, 500);
   fill(0);
-  text("PAUSED", width/2, height/2);
+  textSize(150)
+  text("PAUSED", width/2, 3*height/8);
+  textSize(75);
+  text("Click to Continue", width/2, 5*height/8);
 }
 
 void pauseClicks(){

@@ -21,12 +21,7 @@ void game(){
   message();
   t=t-0.01;
   //paddle
-  stroke(0);
-  fill(255);
-  circle(750, 500, 100);
-  strokeWeight(7);
-  line(735, 475, 735, 525);
-  line(765, 475, 765, 525);
+  strokeWeight(5);
   stroke(0);
   fill(255, 0, 0);
   circle(lx, ly, ld);
