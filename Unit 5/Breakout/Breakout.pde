@@ -2,7 +2,7 @@
 Michael Guo
 2-1
 2026/5/28
-Pong
+Breakout
 */
 
 int mode;
@@ -31,6 +31,7 @@ void setup(){
   mode=intro;
   red=255;
   green=0;
+  blue=0;
   number=60;
   gif=new PImage[60];
   size(800, 800);
