@@ -26,6 +26,7 @@ float t;
 PImage[] gif;
 int number;
 int f;
+float r1, b1, g2, b2;
 
 void setup(){
   size(800, 800);

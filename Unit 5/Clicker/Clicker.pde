@@ -30,7 +30,7 @@ void setup(){
   textAlign(CENTER, CENTER);
   x=width/2;
   y=height/2;
-  d=110;
+  d=150;
   vx=random(-5, 5);
   vy=random(-5, 5);
   score=0;

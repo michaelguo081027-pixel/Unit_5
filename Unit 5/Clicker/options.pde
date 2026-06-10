@@ -38,7 +38,7 @@ void options(){
     fill(0);
     text("Blue=1, Yellow=2, Red=3", 400, 500);
   }else if(difficulty==insane){
-    d=110;
+    d=150;
     fill(0);
     text("No size adjustment for this mode.", 400, 350);
     text("Size gets smaller as game continues.", 400, 450);
@@ -59,5 +59,5 @@ void optionClicks(){
 
 void slider() {
   if (mouseX > 250 && mouseX <550 && mouseY > 535 && mouseY < 565)t = mouseX;
-  d = map(t, 250, 550, 10, 110);
+  d = map(t, 250, 550, 25, 150);
 }

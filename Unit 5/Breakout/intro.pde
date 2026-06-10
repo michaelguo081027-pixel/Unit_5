@@ -8,6 +8,7 @@ void intro(){
   remain=24;
   vx=0;
   vy=random(3, 5);
+  r1=g2=b1=b2=255;
   t=1.5;
   c=24;
   h=new int[c];

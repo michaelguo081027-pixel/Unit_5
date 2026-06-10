@@ -6,9 +6,11 @@ void game(){
   t=t-0.01;
   strokeWeight(5);
   textSize(40);
-  fill(255);
+  fill(r1,255,b1);
   text(remain+" to go!", 7*width/8, 40);
+  fill(255,g2,b2);
   text("Lives: "+lives, width/8, 40);
+  fill(255);
   //paddle
   circle(i, height, 125);
   if(i<=75)i=75;
@@ -31,6 +33,8 @@ void game(){
   }
   if(y>height){
     lives=lives-1;
+    g2=g2-255/3;
+    b2=b2-255/3;
     reset();
     if(lives==0)mode=end;
   }
@@ -69,6 +73,8 @@ void manageBrick(int j){
   vy=(y-v[j])/10;
   stay[j]=false;
   remain=remain-1;
+  r1=r1-255/24;
+  b1=r1-255/24;
   if(remain==0)mode=end;
   }
 }
