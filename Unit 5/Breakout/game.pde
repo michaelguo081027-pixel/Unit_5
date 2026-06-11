@@ -20,6 +20,7 @@ void game(){
     if(dkey==true||rightkey==true)i=i+5;
   }
   //ball
+  fill(255, 0, 255);
   circle(x, y, 30);
   if(t<0){
   x=x+vx;

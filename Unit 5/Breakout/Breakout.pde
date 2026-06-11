@@ -38,7 +38,6 @@ void setup(){
   //gif
   number=60;
   gif=new PImage[60];
-  size(800, 800);
   int k=0;
   while(k<number){
     gif[k]=loadImage("frame_"+k+"_delay-0.03s.gif");
