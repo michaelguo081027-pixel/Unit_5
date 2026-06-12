@@ -1,5 +1,8 @@
 void game(){
   background(0, 0, 128);
+  fill(255);
+  textSize(35);
+  text("Click to Pause", width/2, height/20);
   textSize(50);
   fill(255, 165, 0);
   message();
